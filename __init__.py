@@ -3,7 +3,7 @@ from aqt import mw, gui_hooks
 def choose_deck():
     config = mw.addonManager.getConfig(__name__)
 
-    did = mw.col.decks.id(config["deckname"])
+    did = mw.col.decks.id_for_name(config["deckname"])
     if did is None:
         return
 
